@@ -1,5 +1,7 @@
 //246 list
+
 #include <iostream>
+
 class Point
 {
     int X;
@@ -21,7 +23,7 @@ public:
         Point P(0,0);
         P.X = X + d;
         P.Y = Y + d;
-        return p;
+        return P;
     }
     int get_x() const
     {
@@ -41,7 +43,7 @@ public:
     }
 };
 
-Point&operator +(int d, Point& Z)
+Point&operator+(int d, Point& Z)
 {
     Point P(0,0);
     P.set_x(d + Z.get_x());
@@ -59,6 +61,7 @@ int main(int argc, char *argv[])
 
     Point C = 2 + A;
     C.show();
+
     return 0;
 }
 
